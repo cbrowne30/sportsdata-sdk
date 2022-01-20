@@ -31,7 +31,6 @@ class ScoresApi(object):
         if api_client is None:
             api_client = ApiClient()
         self.api_client = api_client
-        self.scores_path = "/scores"
 
     def are_games_in_progress(self, format, **kwargs):  # noqa: E501
         """Are Games In Progress  # noqa: E501
@@ -93,7 +92,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
 
@@ -113,7 +112,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/AreAnyGamesInProgress', 'GET',
+            '/scores/{format}/AreAnyGamesInProgress', 'GET',
             path_params,
             query_params,
             header_params,
@@ -186,7 +185,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
 
@@ -206,7 +205,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/CurrentSeason', 'GET',
+            '/scores/{format}/CurrentSeason', 'GET',
             path_params,
             query_params,
             header_params,
@@ -285,7 +284,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if '_date' in params:
@@ -307,7 +306,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/GamesByDate/{date}', 'GET',
+            '/scores/{format}/GamesByDate/{date}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -380,7 +379,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
 
@@ -400,7 +399,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/News', 'GET',
+            '/scores/{format}/News', 'GET',
             path_params,
             query_params,
             header_params,
@@ -479,7 +478,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if '_date' in params:
@@ -501,7 +500,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/NewsByDate/{date}', 'GET',
+            '/scores/{format}/NewsByDate/{date}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -580,7 +579,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'playerid' in params:
@@ -602,7 +601,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/NewsByPlayerID/{playerid}', 'GET',
+            '/scores/{format}/NewsByPlayerID/{playerid}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -675,7 +674,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
 
@@ -695,7 +694,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/Players', 'GET',
+            '/scores/{format}/Players', 'GET',
             path_params,
             query_params,
             header_params,
@@ -768,7 +767,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
 
@@ -788,7 +787,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/FreeAgents', 'GET',
+            '/scores/{format}/FreeAgents', 'GET',
             path_params,
             query_params,
             header_params,
@@ -867,7 +866,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'playerid' in params:
@@ -889,7 +888,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/Player/{playerid}', 'GET',
+            '/scores/{format}/Player/{playerid}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -970,7 +969,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'team' in params:
@@ -992,7 +991,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/Players/{team}', 'GET',
+            '/scores/{format}/Players/{team}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1067,7 +1066,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
 
@@ -1087,7 +1086,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/Referees', 'GET',
+            '/scores/{format}/Referees', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1166,7 +1165,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'season' in params:
@@ -1188,7 +1187,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/Games/{season}', 'GET',
+            '/scores/{format}/Games/{season}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1261,7 +1260,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
 
@@ -1281,7 +1280,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/Stadiums', 'GET',
+            '/scores/{format}/Stadiums', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1360,7 +1359,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'season' in params:
@@ -1382,7 +1381,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/Standings/{season}', 'GET',
+            '/scores/{format}/Standings/{season}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1475,7 +1474,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'season' in params:
@@ -1501,7 +1500,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}', 'GET',
+            '/scores/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1580,7 +1579,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if '_date' in params:
@@ -1602,7 +1601,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/TeamGameStatsByDate/{date}', 'GET',
+            '/scores/{format}/TeamGameStatsByDate/{date}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1681,7 +1680,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'season' in params:
@@ -1703,7 +1702,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/TeamSeasonStats/{season}', 'GET',
+            '/scores/{format}/TeamSeasonStats/{season}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1776,7 +1775,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
 
@@ -1796,7 +1795,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/teams', 'GET',
+            '/scores/{format}/teams', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1869,7 +1868,7 @@ class ScoresApi(object):
 
         collection_formats = {}
 
-        path_params = {'scores': self.scores_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
 
@@ -1889,7 +1888,7 @@ class ScoresApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{scores}/{format}/AllTeams', 'GET',
+            '/scores/{format}/AllTeams', 'GET',
             path_params,
             query_params,
             header_params,

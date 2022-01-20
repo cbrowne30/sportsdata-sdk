@@ -31,7 +31,6 @@ class OddsApi(object):
         if api_client is None:
             api_client = ApiClient()
         self.api_client = api_client
-        self.odds_path = "/odds"
 
     def alternate_market_pre_game_odds_by_date(self, format, _date, **kwargs):  # noqa: E501
         """Alternate Market Pre-Game Odds by Date  # noqa: E501
@@ -99,7 +98,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if '_date' in params:
@@ -121,7 +120,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/AlternateMarketGameOddsByDate/{date}', 'GET',
+            '/odds/{format}/AlternateMarketGameOddsByDate/{date}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -202,7 +201,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'gameid' in params:
@@ -224,7 +223,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/AlternateMarketGameOddsLineMovement/{gameid}', 'GET',
+            '/odds/{format}/AlternateMarketGameOddsLineMovement/{gameid}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -305,7 +304,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if '_date' in params:
@@ -327,7 +326,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingEventsByDate/{date}', 'GET',
+            '/odds/{format}/BettingEventsByDate/{date}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -408,7 +407,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'season' in params:
@@ -430,7 +429,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingEvents/{season}', 'GET',
+            '/odds/{format}/BettingEvents/{season}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -511,7 +510,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'season' in params:
@@ -533,7 +532,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingFuturesBySeason/{season}', 'GET',
+            '/odds/{format}/BettingFuturesBySeason/{season}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -614,7 +613,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'market_id' in params:
@@ -636,7 +635,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingMarket/{marketId}', 'GET',
+            '/odds/{format}/BettingMarket/{marketId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -717,7 +716,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'event_id' in params:
@@ -739,7 +738,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingMarkets/{eventId}', 'GET',
+            '/odds/{format}/BettingMarkets/{eventId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -820,7 +819,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'game_id' in params:
@@ -842,7 +841,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingMarketsByGameID/{gameID}', 'GET',
+            '/odds/{format}/BettingMarketsByGameID/{gameID}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -927,7 +926,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'event_id' in params:
@@ -951,7 +950,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingMarketsByMarketType/{eventId}/{marketTypeID}', 'GET',
+            '/odds/{format}/BettingMarketsByMarketType/{eventId}/{marketTypeID}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1024,7 +1023,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
 
@@ -1044,7 +1043,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingMetadata', 'GET',
+            '/odds/{format}/BettingMetadata', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1123,7 +1122,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if '_date' in params:
@@ -1145,7 +1144,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingPlayerPropsByDate/{date}', 'GET',
+            '/odds/{format}/BettingPlayerPropsByDate/{date}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1224,7 +1223,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'game_id' in params:
@@ -1246,7 +1245,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingPlayerPropsByGameID/{gameId}', 'GET',
+            '/odds/{format}/BettingPlayerPropsByGameID/{gameId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1325,7 +1324,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'market_id' in params:
@@ -1347,7 +1346,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingMarketResults/{marketId}', 'GET',
+            '/odds/{format}/BettingMarketResults/{marketId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1428,7 +1427,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'market_id' in params:
@@ -1450,7 +1449,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingSplitsByMarketId/{marketId}', 'GET',
+            '/odds/{format}/BettingSplitsByMarketId/{marketId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1531,7 +1530,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'game_id' in params:
@@ -1553,7 +1552,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/BettingSplitsByGameId/{gameId}', 'GET',
+            '/odds/{format}/BettingSplitsByGameId/{gameId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1638,7 +1637,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'team' in params:
@@ -1662,7 +1661,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/MatchupTrends/{team}/{opponent}', 'GET',
+            '/odds/{format}/MatchupTrends/{team}/{opponent}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1741,7 +1740,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'team' in params:
@@ -1763,7 +1762,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/TeamTrends/{team}', 'GET',
+            '/odds/{format}/TeamTrends/{team}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1842,7 +1841,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if '_date' in params:
@@ -1864,7 +1863,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/PlayerPropsByDate/{date}', 'GET',
+            '/odds/{format}/PlayerPropsByDate/{date}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1949,7 +1948,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if '_date' in params:
@@ -1973,7 +1972,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/PlayerPropsByPlayerID/{date}/{playerid}', 'GET',
+            '/odds/{format}/PlayerPropsByPlayerID/{date}/{playerid}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2058,7 +2057,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if '_date' in params:
@@ -2082,7 +2081,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/PlayerPropsByTeam/{date}/{team}', 'GET',
+            '/odds/{format}/PlayerPropsByTeam/{date}/{team}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2161,7 +2160,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if '_date' in params:
@@ -2183,7 +2182,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/LiveGameOddsByDate/{date}', 'GET',
+            '/odds/{format}/LiveGameOddsByDate/{date}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2262,7 +2261,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'gameid' in params:
@@ -2284,7 +2283,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/LiveGameOddsLineMovement/{gameid}', 'GET',
+            '/odds/{format}/LiveGameOddsLineMovement/{gameid}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2363,7 +2362,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if '_date' in params:
@@ -2385,7 +2384,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/GameOddsByDate/{date}', 'GET',
+            '/odds/{format}/GameOddsByDate/{date}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2464,7 +2463,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
         if 'gameid' in params:
@@ -2485,9 +2484,9 @@ class OddsApi(object):
         # Authentication setting
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
         print("ABOUT TO MAKE REQUEST")
-        print('{odds}/{format}/GameOddsLineMovement/{gameid}')
+        print('/odds/{format}/GameOddsLineMovement/{gameid}')
         return self.api_client.call_api(
-            '{odds}/{format}/GameOddsLineMovement/{gameid}', 'GET',
+            '/odds/{format}/GameOddsLineMovement/{gameid}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2560,7 +2559,7 @@ class OddsApi(object):
 
         collection_formats = {}
 
-        path_params = {'odds': self.odds_path}
+        path_params = {}
         if 'format' in params:
             path_params['format'] = params['format']  # noqa: E501
 
@@ -2580,7 +2579,7 @@ class OddsApi(object):
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
 
         return self.api_client.call_api(
-            '{odds}/{format}/ActiveSportsbooks', 'GET',
+            '/odds/{format}/ActiveSportsbooks', 'GET',
             path_params,
             query_params,
             header_params,
