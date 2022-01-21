@@ -2483,8 +2483,6 @@ class OddsApi(object):
 
         # Authentication setting
         auth_settings = ['apiKeyHeader', 'apiKeyQuery']  # noqa: E501
-        print("ABOUT TO MAKE REQUEST")
-        print('/odds/{format}/GameOddsLineMovement/{gameid}')
         return self.api_client.call_api(
             '/odds/{format}/GameOddsLineMovement/{gameid}', 'GET',
             path_params,
